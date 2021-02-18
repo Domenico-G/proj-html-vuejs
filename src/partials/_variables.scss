@@ -1,0 +1,14 @@
+$font-mont: "Montserrat", sans-serif;
+$font-rale: "Raleway", sans-serif;
+
+@mixin style-h2 {
+  color: #333;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+@mixin style-p {
+  color: #747474;
+  font-size: 15px;
+  font-weight: 500;
+}
