@@ -9,16 +9,17 @@ $bg-home: url("../img/bg-home.jpg");
   margin: 0 auto;
 }
 
-@mixin style-h2 {
+@mixin style-h3 {
   color: #333;
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @mixin style-p {
   color: #747474;
   font-size: 15px;
   font-weight: 500;
+  line-height: 2.27;
 }
 
 @mixin flex-centred {
