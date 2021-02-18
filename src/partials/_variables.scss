@@ -1,6 +1,7 @@
 $font-mont: "Montserrat", sans-serif;
 $font-rale: "Raleway", sans-serif;
 $hover: all 0.2s ease-in-out;
+$bg-home: url("../img/bg-home.jpg");
 
 @mixin container-centred {
   max-width: 1200px;
@@ -18,4 +19,10 @@ $hover: all 0.2s ease-in-out;
   color: #747474;
   font-size: 15px;
   font-weight: 500;
+}
+
+@mixin flex-centred {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
