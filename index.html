@@ -18,7 +18,24 @@
   </head>
   <body>
     <!-- inizio app -->
-    <div id="app"></div>
+    <div id="app">
+      <!-- inizio header -->
+      <div class="header">
+        <div class="menu">
+          <div class="menu-container">
+            <div class="logo">
+              <img src="img/logo.png" alt="Construction Project logo" />
+            </div>
+            <ul class="link">
+              <li v-for="link in menuLink">
+                <a :href="link.url">{{link.name}}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- fine header -->
+    </div>
     <!-- fine app -->
     <!-- file js -->
     <script src="js/app.js"></script>

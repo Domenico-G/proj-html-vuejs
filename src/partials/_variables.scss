@@ -1,5 +1,12 @@
 $font-mont: "Montserrat", sans-serif;
 $font-rale: "Raleway", sans-serif;
+$hover: all 0.2s ease-in-out;
+
+@mixin container-centred {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 @mixin style-h2 {
   color: #333;
