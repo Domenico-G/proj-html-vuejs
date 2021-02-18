@@ -284,6 +284,30 @@ body {
           background-color: $primary-color;
           color: $secondary-color;
           transform: rotateY(180deg);
+
+          h4 {
+            padding-bottom: 20px;
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+          }
+
+          p {
+            @include style-p;
+          }
+
+          .button {
+            padding: 13px 29px;
+            width: max-content;
+            margin: 10px auto;
+            background-color: #ffe07b;
+            transition: $hover;
+
+            &:hover {
+              background-color: $secondary-color;
+              color: #fff;
+            }
+          }
         }
       }
     }

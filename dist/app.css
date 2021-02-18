@@ -258,3 +258,28 @@ body a {
   color: #1e1e1e;
   transform: rotateY(180deg);
 }
+.skills-container .cards .flip-card-back h4 {
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.skills-container .cards .flip-card-back p {
+  color: #747474;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 2.27;
+}
+.skills-container .cards .flip-card-back .button {
+  padding: 13px 29px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 10px auto;
+  background-color: #ffe07b;
+  transition: all 0.2s ease-in-out;
+}
+.skills-container .cards .flip-card-back .button:hover {
+  background-color: #1e1e1e;
+  color: #fff;
+}
