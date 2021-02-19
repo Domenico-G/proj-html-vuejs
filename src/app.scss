@@ -625,11 +625,58 @@ body {
 }
 
 .testimonial {
-  background: red;
+  background: url(../img/bg-testimonial.jpg) no-repeat center center;
+  background-size: cover;
 
   &-container {
     @include container-centred;
-    height: 300px;
-    border: 2px solid red;
+    text-align: center;
+    color: #fff;
+    padding: 80px 0;
+
+    h3 {
+      @include style-h3;
+      color: #fff;
+    }
+
+    .img-testimonial {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    p {
+      padding: 30px 0 0 0;
+      font-size: 18px;
+      font-weight: 500;
+      width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .circles {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+
+      .circle {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+
+      .circle-full {
+        margin-left: 10px;
+        height: 9px;
+        width: 9px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+      }
+    }
   }
 }
