@@ -15,7 +15,88 @@ body a {
   text-decoration: none;
 }
 
+.line-description {
+  margin: 25px auto;
+  border: 1px solid #fed23f;
+  border-radius: 10px;
+  width: 206px;
+}
+
+.separatore-top {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.separatore-top:after {
+  content: "";
+  position: absolute;
+  height: 550px;
+  left: -20%;
+  right: -20%;
+  border-radius: 50%;
+  top: -455px;
+  background: #fff;
+}
+
+.separatore-bottom {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.separatore-bottom:after {
+  content: "";
+  position: absolute;
+  height: 550px;
+  left: -20%;
+  right: -20%;
+  border-radius: 50%;
+  bottom: -455px;
+  background: #fff;
+}
+
+.layer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scaleY(0);
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: #fed23f;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+.layer .icons i {
+  margin-right: 10px;
+  font-size: 20px;
+  border-radius: 50%;
+  color: #fed23f;
+  background-color: #fff;
+  padding: 15px;
+}
+.layer h4 {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 15px 0;
+}
+.layer p {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.card:hover .layer {
+  height: 100%;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
 .menu {
+  z-index: 999999;
   width: 100%;
   position: fixed;
   top: 0;
@@ -173,38 +254,26 @@ body a {
   font-size: 32px;
   font-weight: 400;
 }
-.skills-container .description hr {
-  margin: 25px auto;
-  border: 1px solid #fed23f;
-  border-radius: 10px;
-  width: 206px;
-}
 .skills-container .description p {
-  margin: 0 auto;
   color: #747474;
   font-size: 15px;
   font-weight: 500;
   line-height: 2.27;
   width: 800px;
+  margin: 0 auto;
 }
 .skills-container .cards {
   padding-bottom: 80px;
   display: flex;
 }
 .skills-container .cards .flip-card {
-  position: relative;
-  background-color: transparent;
   width: 300px;
-  height: 365px;
+  min-height: 330px;
   perspective: 1000px;
   padding: 20px;
 }
 .skills-container .cards .flip-card-inner {
   position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
   transform-style: preserve-3d;
   transition: all 0.2s ease-in-out;
 }
@@ -212,11 +281,9 @@ body a {
   transform: rotateY(180deg);
 }
 .skills-container .cards .flip-card-front {
+  height: 100%;
   padding: 27px 20px;
   border-radius: 10px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #f5f5f5;
@@ -245,13 +312,16 @@ body a {
   font-size: 15px;
   font-weight: 500;
   line-height: 2.27;
+  width: 800px;
+  margin: 0 auto;
+  width: auto;
 }
 .skills-container .cards .flip-card-back {
-  padding: 27px 20px;
+  height: 100%;
+  padding: 17px 20px;
   border-radius: 10px;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #fed23f;
@@ -259,7 +329,7 @@ body a {
   transform: rotateY(180deg);
 }
 .skills-container .cards .flip-card-back h4 {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
@@ -269,6 +339,9 @@ body a {
   font-size: 15px;
   font-weight: 500;
   line-height: 2.27;
+  width: 800px;
+  margin: 0 auto;
+  width: auto;
 }
 .skills-container .cards .flip-card-back .button {
   padding: 13px 29px;
@@ -278,8 +351,100 @@ body a {
   margin: 10px auto;
   background-color: #ffe07b;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 .skills-container .cards .flip-card-back .button:hover {
   background-color: #1e1e1e;
   color: #fff;
+}
+
+.data-counter {
+  width: 100%;
+  background: url("../img/bg-data-section.jpg") no-repeat center center;
+  background-size: cover;
+}
+.data-counter-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  height: 400px;
+  display: flex;
+}
+.data-counter-container .data-box {
+  margin: auto;
+  text-align: center;
+  color: #fed23f;
+  font-weight: 500;
+}
+.data-counter-container .data-box i {
+  font-size: 70px;
+}
+.data-counter-container .data-box .number {
+  padding: 10px;
+  font-size: 60px;
+}
+.data-counter-container .data-box p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.work-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.work-container .description {
+  padding-top: 80px;
+  text-align: center;
+}
+.work-container .description h3 {
+  color: #333;
+  font-size: 32px;
+  font-weight: 400;
+}
+.work-container .description p {
+  color: #747474;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 2.27;
+  width: 800px;
+  margin: 0 auto;
+}
+.work-container .cards {
+  padding: 80px 0;
+  display: flex;
+}
+.work-container .cards .card {
+  cursor: pointer;
+  position: relative;
+  width: calc(100% / 3);
+  margin: 10px;
+}
+.work-container .cards .card img {
+  width: 100%;
+}
+.work-container .work-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.work-container .work-button .btn-w {
+  text-align: center;
+  width: calc(100% / 3);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 13px 29px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.work-container .work-button .btn-w:hover {
+  background-color: #fed23f;
+}
+.work-container .work-button hr {
+  width: calc(100% / 3);
+  margin: 0 20px;
+  border: 1px solid #f5f5f5;
 }

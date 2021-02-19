@@ -20,6 +20,8 @@ $bg-home: url("../img/bg-home.jpg");
   font-size: 15px;
   font-weight: 500;
   line-height: 2.27;
+  width: 800px;
+  margin: 0 auto;
 }
 
 @mixin flex-centred {
