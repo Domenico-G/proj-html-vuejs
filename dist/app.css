@@ -96,7 +96,7 @@ body a {
 }
 
 .menu {
-  z-index: 999999;
+  z-index: 1;
   width: 100%;
   position: fixed;
   top: 0;
@@ -189,6 +189,7 @@ body a {
   background-color: #1e1e1e;
   margin: 10px;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 .jumbotron-container .row .buttons .button:hover {
   background-color: #fed23f;
@@ -233,6 +234,7 @@ body a {
   letter-spacing: 2px;
   border: 2px solid #fff;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 .free-quote .button:hover {
   background: #fff;
@@ -447,4 +449,165 @@ body a {
   width: calc(100% / 3);
   margin: 0 20px;
   border: 1px solid #f5f5f5;
+}
+
+.values {
+  background-color: #f5f5f5;
+}
+.values-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.values-container .description {
+  text-align: center;
+  padding: 80px 0 50px 0;
+}
+.values-container .description h3 {
+  color: #333;
+  font-size: 32px;
+  font-weight: 400;
+}
+.values-container .description p {
+  color: #747474;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 2.27;
+  width: 800px;
+  margin: 0 auto;
+}
+.values-container .values-cards {
+  display: flex;
+  padding-bottom: 80px;
+}
+.values-container .values-cards .card {
+  width: calc(100% / 4);
+  text-align: center;
+}
+.values-container .values-cards .card .hover-effect {
+  position: relative;
+}
+.values-container .values-cards .card .hover-effect:hover .icon {
+  background: #fed23f;
+  transform: scale(0.9);
+}
+.values-container .values-cards .card .hover-effect:hover .icon::after {
+  -webkit-animation: animate 1.3s linear;
+          animation: animate 1.3s linear;
+}
+.values-container .values-cards .card .hover-effect:hover h5 {
+  color: #fed23f;
+}
+.values-container .values-cards .card .hover-effect .i-1 {
+  background: #4ea4a5;
+}
+.values-container .values-cards .card .hover-effect .i-2 {
+  background: #4e6da5;
+}
+.values-container .values-cards .card .hover-effect .i-3 {
+  background: #f6722a;
+}
+.values-container .values-cards .card .hover-effect .i-4 {
+  background: #a7cf47;
+}
+.values-container .values-cards .card .icon {
+  transition: all 0.2s ease-in-out;
+  margin: auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+}
+.values-container .values-cards .card .icon::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  box-shadow: 0px 0px 16px 7px #fed23f;
+  border-radius: 50%;
+  opacity: 0;
+}
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  70% {
+    opacity: 8;
+    transform: scale(1.2);
+  }
+  95% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  70% {
+    opacity: 8;
+    transform: scale(1.2);
+  }
+  95% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+.values-container .values-cards .card .icon i {
+  color: #fff;
+  font-size: 61px;
+  margin: auto;
+}
+.values-container .values-cards .card h5 {
+  transition: all 0.2s ease-in-out;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 20px 0;
+}
+.values-container .values-cards .card hr {
+  width: 20px;
+  margin: 10px auto;
+  border: 1px solid #8f8f8f;
+  border-radius: 20px;
+}
+.values-container .values-cards .card p {
+  color: #747474;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 2.27;
+  width: 800px;
+  margin: 0 auto;
+  width: auto;
+  padding: 10px;
+}
+
+.testimonial {
+  background: red;
+}
+.testimonial-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  height: 300px;
+  border: 2px solid red;
 }

@@ -115,7 +115,7 @@ body {
 // inizio style header
 
 .menu {
-  z-index: 999999;
+  z-index: 1;
   width: 100%;
   position: fixed;
   top: 0;
@@ -213,6 +213,7 @@ body {
           background-color: $secondary-color;
           margin: 10px;
           transition: $hover;
+          cursor: pointer;
 
           &:hover {
             background-color: $primary-color;
@@ -264,6 +265,7 @@ body {
     letter-spacing: 2px;
     border: 2px solid #fff;
     transition: $hover;
+    cursor: pointer;
 
     &:hover {
       background: #fff;
@@ -483,5 +485,151 @@ body {
       margin: 0 20px;
       border: 1px solid #f5f5f5;
     }
+  }
+}
+
+.values {
+  background-color: #f5f5f5;
+
+  &-container {
+    @include container-centred;
+
+    .description {
+      text-align: center;
+      padding: 80px 0 50px 0;
+
+      h3 {
+        @include style-h3;
+      }
+
+      p {
+        @include style-p;
+      }
+    }
+
+    .values-cards {
+      display: flex;
+      padding-bottom: 80px;
+
+      .card {
+        width: calc(100% / 4);
+        text-align: center;
+
+        .hover-effect {
+          position: relative;
+          &:hover .icon {
+            background: $primary-color;
+            transform: scale(0.9);
+          }
+          &:hover .icon::after {
+            animation: animate 1.3s linear;
+          }
+
+          &:hover h5 {
+            color: $primary-color;
+          }
+
+          .i-1 {
+            background: #4ea4a5;
+          }
+
+          .i-2 {
+            background: #4e6da5;
+          }
+
+          .i-3 {
+            background: #f6722a;
+          }
+
+          .i-4 {
+            background: #a7cf47;
+          }
+        }
+
+        .icon {
+          transition: $hover;
+          margin: auto;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          display: flex;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            -webkit-box-shadow: 0px 0px 16px 7px #fed23f;
+            box-shadow: 0px 0px 16px 7px #fed23f;
+            border-radius: 50%;
+            opacity: 0;
+          }
+
+          @keyframes animate {
+            0% {
+              opacity: 0;
+              transform: scale(0.9);
+            }
+            50% {
+              opacity: 1;
+              transform: scale(1.1);
+            }
+
+            70% {
+              opacity: 8;
+              transform: scale(1.2);
+            }
+
+            95% {
+              opacity: 0;
+              transform: scale(1.4);
+            }
+
+            100% {
+              opacity: 0;
+              transform: scale(1.5);
+            }
+          }
+
+          i {
+            color: #fff;
+            font-size: 61px;
+            margin: auto;
+          }
+        }
+
+        h5 {
+          transition: $hover;
+          font-size: 16px;
+          font-weight: 400;
+          margin: 20px 0;
+        }
+
+        hr {
+          width: 20px;
+          margin: 10px auto;
+          border: 1px solid #8f8f8f;
+          border-radius: 20px;
+        }
+
+        p {
+          @include style-p;
+          width: auto;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+.testimonial {
+  background: red;
+
+  &-container {
+    @include container-centred;
+    height: 300px;
+    border: 2px solid red;
   }
 }
