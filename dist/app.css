@@ -743,3 +743,95 @@ body a {
 .project-container .work-button hr {
   border: 1px solid #fff;
 }
+
+.partners-container {
+  padding: 80px 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.partners-container .description {
+  text-align: center;
+}
+.partners-container .description h3 {
+  color: #333;
+  font-size: 32px;
+  font-weight: 400;
+}
+.partners-container .description p {
+  color: #747474;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 2.27;
+  width: 800px;
+  margin: 0 auto;
+}
+.partners-container .logo-container {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.partners-container .logo-container .logo-partners {
+  width: calc(100% / 5);
+  height: 115px;
+}
+.partners-container .logo-container .logo-partners img {
+  height: 100%;
+}
+
+.call-to-action {
+  background: url("../img/bg-footer.jpg") no-repeat center center;
+  background-size: cover;
+}
+.call-to-action-container {
+  padding: 130px 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.call-to-action-container .description {
+  width: calc(100% / 3 * 2);
+  padding-right: 20px;
+}
+.call-to-action-container .description h3 {
+  font-size: 34px;
+  font-weight: 400;
+}
+.call-to-action-container .description .line-description {
+  margin: 30px 0;
+}
+.call-to-action-container .description p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.call-to-action-container .button-box {
+  text-align: center;
+  width: calc(100% / 3);
+}
+.call-to-action-container .button-box .button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  padding: 17px 40px;
+  background: #fed23f;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.call-to-action-container .button-box .button:hover {
+  background: #1e1e1e;
+  color: #fff;
+}
+.call-to-action-container .button-box p {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px 0;
+}
