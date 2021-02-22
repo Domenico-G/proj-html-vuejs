@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- file css -->
     <link rel="stylesheet" href="dist/app.css" />
+    <!-- Gsap  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <!-- vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- google font -->
@@ -27,7 +30,7 @@
     <!-- inizio app -->
     <div id="app">
       <!-- inizio header -->
-      <div class="header">
+      <header>
         <!-- inizio menu -->
         <div class="menu">
           <div class="menu-container">
@@ -66,7 +69,7 @@
           <div class="button">Get a free quote</div>
         </div>
         <!-- fine bunner -->
-      </div>
+      </header>
       <!-- fine header -->
       <!-- inizio main -->
       <main>
@@ -180,28 +183,14 @@
         </div>
         <!-- fine skills -->
         <!-- inizio data counter -->
-        <div class="data-counter">
+        <div class="data-counter parallax">
+          <div class="parallax-bg"></div>
           <div class="separatore-top"></div>
           <div class="data-counter-container">
-            <div class="data-box">
-              <i class="fas fa-suitcase"></i>
-              <div class="number">3553</div>
-              <p>PLANNING APPLICATIONS</p>
-            </div>
-            <div class="data-box">
-              <i class="far fa-building"></i>
-              <div class="number">896</div>
-              <p>COMPLETED PROJECTS</p>
-            </div>
-            <div class="data-box">
-              <i class="fas fa-users"></i>
-              <div class="number">172</div>
-              <p>TRAINED PROFESSIONALS</p>
-            </div>
-            <div class="data-box">
-              <i class="fas fa-globe"></i>
-              <div class="number">19</div>
-              <p>INTERNATIONAL OFFICES</p>
+            <div v-for="skill in skills" class="data-box">
+              <i :class="skill.iconCode"></i>
+              <div class="number">{{skill.startNumber.toFixed()}}</div>
+              <p>{{skill.text}}</p>
             </div>
           </div>
           <div class="separatore-bottom"></div>
@@ -332,7 +321,8 @@
         </div>
         <!-- fine core values section -->
         <!-- inizio testimonial section -->
-        <div class="testimonial">
+        <div class="testimonial parallax">
+          <div class="parallax-bg"></div>
           <div class="separatore-top"></div>
           <div class="testimonial-container">
             <h3>Our Home Owners Say</h3>
@@ -484,7 +474,8 @@
         </div>
         <!-- fine partners section  -->
         <!-- inizio call to action -->
-        <div class="call-to-action">
+        <div class="call-to-action parallax">
+          <div class="parallax-bg"></div>
           <div class="call-to-action-container">
             <div class="description">
               <h3>Building Inspiring Spaces</h3>
@@ -503,6 +494,9 @@
         <!-- fine call to action -->
       </main>
       <!-- fine main  -->
+      <!-- inizio footer -->
+      <footer></footer>
+      <!-- fine footer -->
     </div>
     <!-- fine app -->
     <!-- file js -->

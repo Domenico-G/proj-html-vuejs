@@ -142,6 +142,25 @@ body {
   }
 }
 
+.parallax {
+  position: relative;
+  overflow: hidden;
+
+  &-bg {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+// fine style utility
+
 // inizio style header
 
 .menu {
@@ -424,9 +443,10 @@ body {
 }
 
 .data-counter {
-  width: 100%;
-  background: url("../img/bg-data-section.jpg") no-repeat center center;
-  background-size: cover;
+  .parallax-bg {
+    height: 900px;
+    background-image: url("../img/bg-data-section.jpg");
+  }
 
   &-container {
     @include container-centred;
@@ -562,8 +582,8 @@ body {
             top: 0px;
             right: 0px;
             bottom: 0px;
-            -webkit-box-shadow: 0px 0px 16px 7px #fed23f;
-            box-shadow: 0px 0px 16px 7px #fed23f;
+            -webkit-box-shadow: 0px 0px 16px 7px $primary-color;
+            box-shadow: 0px 0px 16px 7px $primary-color;
             border-radius: 50%;
             opacity: 0;
           }
@@ -625,8 +645,10 @@ body {
 }
 
 .testimonial {
-  background: url(../img/bg-testimonial.jpg) no-repeat center center;
-  background-size: cover;
+  .parallax-bg {
+    height: 1000px;
+    background-image: url("../img/bg-testimonial.jpg");
+  }
 
   .separatore-top::after {
     background: #f5f5f5;
@@ -812,8 +834,10 @@ body {
 }
 
 .call-to-action {
-  background: url("../img/bg-footer.jpg") no-repeat center center;
-  background-size: cover;
+  .parallax-bg {
+    height: 600px;
+    background-image: url("../img/bg-footer.jpg");
+  }
 
   &-container {
     padding: 130px 0;

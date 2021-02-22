@@ -17,7 +17,7 @@ body a {
 
 .line-description {
   margin: 25px auto;
-  border: 1px solid #fed23f;
+  border: 1px solid #eeeeee;
   border-radius: 10px;
   width: 206px;
 }
@@ -67,7 +67,7 @@ body a {
   height: 100%;
   width: 100%;
   opacity: 0;
-  background-color: #fed23f;
+  background-color: #eeeeee;
   transition: all 0.3s ease-in-out;
   color: #fff;
   text-align: center;
@@ -76,7 +76,7 @@ body a {
   margin-right: 10px;
   font-size: 20px;
   border-radius: 50%;
-  color: #fed23f;
+  color: #eeeeee;
   background-color: #fff;
   padding: 15px;
 }
@@ -114,12 +114,28 @@ body a {
   transition: all 0.2s ease-in-out;
 }
 .work-button .btn-w:hover {
-  background-color: #fed23f;
+  background-color: #eeeeee;
 }
 .work-button hr {
   width: calc(100% / 3);
   margin: 0 20px;
   border: 1px solid #f5f5f5;
+}
+
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+.parallax-bg {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translate3d(0px, 0px, 0px);
 }
 
 .menu {
@@ -160,12 +176,12 @@ body a {
 }
 .menu-container .link li a:focus,
 .menu-container .link li a:hover {
-  color: #fed23f;
+  color: #eeeeee;
   transition: all 0.2s ease-in-out;
 }
 .menu-container .link li:last-child {
   cursor: pointer;
-  background: #fed23f;
+  background: #eeeeee;
   padding: 13px 29px;
 }
 .menu-container .link li:last-child:hover {
@@ -198,7 +214,7 @@ body a {
 }
 .jumbotron-container .row h3 {
   font-size: 24px;
-  color: #fed23f;
+  color: #eeeeee;
   font-weight: 400;
   padding: 20px 0;
 }
@@ -219,11 +235,11 @@ body a {
   cursor: pointer;
 }
 .jumbotron-container .row .buttons .button:hover {
-  background-color: #fed23f;
+  background-color: #eeeeee;
   color: #1e1e1e;
 }
 .jumbotron-container .row .buttons .button:last-child {
-  background-color: #fed23f;
+  background-color: #eeeeee;
   color: #1e1e1e;
 }
 .jumbotron-container .row .buttons .button:last-child:hover {
@@ -232,7 +248,7 @@ body a {
 }
 
 .bunner {
-  background-color: #fed23f;
+  background-color: #eeeeee;
 }
 .bunner-container {
   max-width: 1200px;
@@ -353,7 +369,7 @@ body a {
   top: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: #fed23f;
+  background-color: #eeeeee;
   color: #1e1e1e;
   transform: rotateY(180deg);
 }
@@ -387,10 +403,9 @@ body a {
   color: #fff;
 }
 
-.data-counter {
-  width: 100%;
-  background: url("../img/bg-data-section.jpg") no-repeat center center;
-  background-size: cover;
+.data-counter .parallax-bg {
+  height: 900px;
+  background-image: url("../img/bg-data-section.jpg");
 }
 .data-counter-container {
   max-width: 1200px;
@@ -402,7 +417,7 @@ body a {
 .data-counter-container .data-box {
   margin: auto;
   text-align: center;
-  color: #fed23f;
+  color: #eeeeee;
   font-weight: 500;
 }
 .data-counter-container .data-box i {
@@ -490,7 +505,7 @@ body a {
   position: relative;
 }
 .values-container .values-cards .card .hover-effect:hover .icon {
-  background: #fed23f;
+  background: #eeeeee;
   transform: scale(0.9);
 }
 .values-container .values-cards .card .hover-effect:hover .icon::after {
@@ -498,7 +513,7 @@ body a {
           animation: animate 1.3s linear;
 }
 .values-container .values-cards .card .hover-effect:hover h5 {
-  color: #fed23f;
+  color: #eeeeee;
 }
 .values-container .values-cards .card .hover-effect .i-1 {
   background: #4ea4a5;
@@ -527,7 +542,7 @@ body a {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  box-shadow: 0px 0px 16px 7px #fed23f;
+  box-shadow: 0px 0px 16px 7px #eeeeee;
   border-radius: 50%;
   opacity: 0;
 }
@@ -601,9 +616,9 @@ body a {
   padding: 10px;
 }
 
-.testimonial {
-  background: url(../img/bg-testimonial.jpg) no-repeat center center;
-  background-size: cover;
+.testimonial .parallax-bg {
+  height: 1000px;
+  background-image: url("../img/bg-testimonial.jpg");
 }
 .testimonial .separatore-top::after {
   background: #f5f5f5;
@@ -715,7 +730,7 @@ body a {
   line-height: 1.3;
 }
 .project-container .project-cards .description-card h5:hover {
-  color: #fed23f;
+  color: #eeeeee;
   cursor: pointer;
 }
 .project-container .project-cards .description-card span {
@@ -780,9 +795,9 @@ body a {
   height: 100%;
 }
 
-.call-to-action {
-  background: url("../img/bg-footer.jpg") no-repeat center center;
-  background-size: cover;
+.call-to-action .parallax-bg {
+  height: 600px;
+  background-image: url("../img/bg-footer.jpg");
 }
 .call-to-action-container {
   padding: 130px 0;
@@ -819,7 +834,7 @@ body a {
   width: max-content;
   margin: 0 auto;
   padding: 17px 40px;
-  background: #fed23f;
+  background: #eeeeee;
   font-size: 18px;
   text-transform: uppercase;
   color: #333;
