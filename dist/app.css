@@ -796,11 +796,11 @@ body a {
 }
 
 .call-to-action .parallax-bg {
-  height: 600px;
+  height: 650px;
   background-image: url("../img/bg-footer.jpg");
 }
 .call-to-action-container {
-  padding: 130px 0;
+  padding: 125px 0;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -849,4 +849,61 @@ body a {
   font-size: 15px;
   font-weight: 500;
   padding: 15px 0;
+}
+
+footer {
+  background: #3f3f3f;
+  padding-top: 15px;
+}
+
+.main-footer {
+  background: #1e1e1e;
+  padding: 80px 30px 70px;
+}
+.main-footer-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+.main-footer-container .box-slogan {
+  width: calc(100% / 4);
+  padding: 0 15px;
+}
+.main-footer-container .box-slogan p {
+  font-size: 15px;
+  color: #747474;
+  padding: 30px 0;
+  line-height: 2.3;
+  max-width: 230px;
+}
+.main-footer-container .box-slogan .button {
+  background: #eeeeee;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  text-transform: uppercase;
+  padding: 13px 29px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+}
+.main-footer-container .box-slogan .button:hover {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+.main-footer .box-tweet {
+  width: calc(100% / 4);
+}
+.main-footer .box-tweet .tweet-content {
+  display: flex;
+}
+.main-footer .box-tweet .img-hub {
+  width: 100%;
+}
+.main-footer .box-tweet .img-hub img {
+  width: 100%;
+  border-radius: 10px;
 }

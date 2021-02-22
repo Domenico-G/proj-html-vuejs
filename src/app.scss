@@ -835,12 +835,12 @@ body {
 
 .call-to-action {
   .parallax-bg {
-    height: 600px;
+    height: 650px;
     background-image: url("../img/bg-footer.jpg");
   }
 
   &-container {
-    padding: 130px 0;
+    padding: 125px 0;
     @include container-centred;
     display: flex;
     align-items: center;
@@ -891,6 +891,60 @@ body {
         font-size: 15px;
         font-weight: 500;
         padding: 15px 0;
+      }
+    }
+  }
+}
+
+// fine main
+
+// inizio footer
+
+footer {
+  background: #3f3f3f;
+  padding-top: 15px;
+}
+
+.main-footer {
+  background: $secondary-color;
+  padding: 80px 30px 70px;
+
+  &-container {
+    @include container-centred;
+    display: flex;
+    
+
+    .box-slogan {
+      width: calc(100% / 4);
+      padding: 0 15px;
+
+      p {
+        font-size: 15px;
+        color: #747474;
+        padding: 30px 0;
+        line-height: 2.3;
+        max-width: 230px;
+      }
+
+      .button {
+        @include primary-button-s;
+      }
+    }
+  }
+
+  .box-tweet {
+     width: calc(100% / 4);
+
+    .tweet-content {
+      display: flex;
+    }
+
+    .img-hub {
+      width: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
       }
     }
   }

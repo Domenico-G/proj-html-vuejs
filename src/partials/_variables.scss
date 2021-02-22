@@ -29,3 +29,38 @@ $bg-home: url("../img/bg-home.jpg");
   align-items: center;
   justify-content: space-between;
 }
+
+@mixin primary-button-s {
+  background: $primary-color;
+  max-width: max-content;
+  text-transform: uppercase;
+  padding: 13px 29px;
+  font-size: 14px;
+  color: #333;
+  transition: $hover;
+  letter-spacing: 2px;
+  font-family: $font-mont;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: #fff;
+  }
+}
+
+@mixin primary-button-l {
+  max-width: max-content;
+  background: $primary-color;
+  text-transform: uppercase;
+  padding: 17px 40px;
+  font-size: 18px;
+  color: #333;
+  color: #333;
+  transition: $hover;
+  letter-spacing: 2px;
+  font-family: $font-mont;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: #fff;
+  }
+}

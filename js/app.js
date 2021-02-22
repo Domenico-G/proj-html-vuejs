@@ -1,8 +1,8 @@
 new Vue({
   el: "#app",
   data: {
-    flag: true,
-    activeLinkMenu: 0,
+    slogan:
+      "We are specialists in the construction of unique and exclusive properties. Our work inspires. We pride ourselves on delivering outstanding quality and design for leading clients across the world.",
     menuLink: [
       {
         name: "home",
@@ -12,7 +12,6 @@ new Vue({
         name: "about",
         url: "#",
       },
-
       {
         name: "service",
         url: "#",
@@ -59,14 +58,14 @@ new Vue({
   },
   mounted() {
     // effetto parallasse
-    gsap.utils.toArray(".parallax").forEach((section, i) => {
-      section.bg = section.querySelector(".parallax-bg");
-      console.log(section.bg);
-      gsap.to(section.bg, {
+    gsap.utils.toArray(".parallax").forEach((el, i) => {
+      el.bg = el.querySelector(".parallax-bg");
+      console.log(el.bg);
+      gsap.to(el.bg, {
         transform: `translate3d(0px, calc(0px - 200px), 0px)`,
         ease: "none",
         scrollTrigger: {
-          trigger: section,
+          trigger: el,
           scrub: true,
         },
       });
