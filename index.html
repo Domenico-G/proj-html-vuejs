@@ -513,20 +513,54 @@
                   <img src="img/fusion-logo.png" alt="" />
                 </div>
                 <p>
-                  ThemeFusion <br />
-                  <span>@Theme_Fusion</span>
+                  <span>ThemeFusion</span> <br />
+                  @Theme_Fusion
                 </p>
                 <i class="fab fa-twitter"></i>
               </div>
               <p>
-                Why do we recommend @HubSpot for the #avada #WebsiteBuilder?
-                It's an excellent CRM with FREE tools & integrations that will
-                help you grow better. Empowering you to increase leads,
-                accelerate sales, streamline customer service, & build a
-                successful business https://bit.ly/3pz1zow
+                Have your say and shape the Avada Website Builder Roadmap for
+                the future. Submit your feature requests here
+                <a href="">bit.ly/2NJoU51</a> and vote for the features that
+                matter to you
+                <a href=""
+                  >bit.ly/2HS7Dsa#avada#WebsiteBuilder <br />
+                  #WordPress#Destiny#together</a
+                >
               </p>
               <div class="img-hub">
-                <img src="img/hub-img.jpg" alt="">
+                <img src="img/hub-img.jpg" alt="" />
+              </div>
+              <div class="icon-tweet">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-sign-out-alt"></i>
+              </div>
+              <div class="time">3h</div>
+            </div>
+            <div class="box-contact">
+              <h4>Contact us today</h4>
+              <div v-for="content in contactWidget" class="contact-content">
+                <i :class="content.iconCode"></i>
+                <p>{{content.description}}</p>
+              </div>
+            </div>
+            <div class="box-map">
+              <h4>Find us</h4>
+              <div class="map-img">
+                <img src="img/staticmap.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-bar">
+          <div class="bottom-bar-container">
+            <div class="info">
+              COPYRIGHT 2012 - 2015 AVADA THEME BY <span>THEME FUSION</span> |
+              ALL RIGHTS RESERVED | POWERED BY <span>WORDPRESS</span>
+            </div>
+            <div class="social">
+              <div class="social-icon" v-for="icon in social">
+                <i :class="icon.iconCode"></i>
               </div>
             </div>
           </div>

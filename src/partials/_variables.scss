@@ -42,7 +42,7 @@ $bg-home: url("../img/bg-home.jpg");
   font-family: $font-mont;
 
   &:hover {
-    background-color: $secondary-color;
+    background-color: $button-hover;
     color: #fff;
   }
 }
@@ -54,13 +54,12 @@ $bg-home: url("../img/bg-home.jpg");
   padding: 17px 40px;
   font-size: 18px;
   color: #333;
-  color: #333;
   transition: $hover;
   letter-spacing: 2px;
   font-family: $font-mont;
 
   &:hover {
-    background-color: $secondary-color;
+    background-color: $button-hover;
     color: #fff;
   }
 }

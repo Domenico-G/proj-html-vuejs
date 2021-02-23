@@ -29,6 +29,40 @@ new Vue({
         url: "#",
       },
     ],
+    social: [
+      { iconCode: "fab fa-facebook-f", url: "#" },
+      { iconCode: "fab fa-twitter", url: "#" },
+      { iconCode: "fab fa-youtube", url: "#" },
+      { iconCode: "fab fa-instagram", url: "#" },
+    ],
+    contactWidget: [
+      {
+        description:
+          "Corporate Location 1600 Amphitheatre Parkway London WC11BA",
+        iconCode: "fas fa-globe",
+      },
+      {
+        description:
+          "Residential Location 9521 Broadsberry Avenue Paddington RC7 9ZA",
+        iconCode: "fas fa-home",
+      },
+      {
+        description: "1.800.458.556 / 1.800.532.2112",
+        iconCode: "fas fa-phone",
+      },
+      {
+        description: "info@your-domain.com",
+        iconCode: "far fa-envelope",
+      },
+      {
+        description: "Monday - Friday: 9:00 AM - 6:00 PM",
+        iconCode: "far fa-clock",
+      },
+      {
+        description: "Saturday - Sunday: 9:00 AM - 12:00 PM",
+        iconCode: "far fa-clock",
+      },
+    ],
     skills: [
       {
         startNumber: 0,
