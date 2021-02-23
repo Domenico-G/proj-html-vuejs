@@ -1,7 +1,6 @@
 new Vue({
   el: "#app",
   data: {
-    timer: 0,
     testimonialIndex: 0,
     buttonShow: 0,
     offSet: 0,
@@ -123,8 +122,13 @@ new Vue({
     });
 
     // dinamicizzazione testimonial
-    const intervalTestimonial = setInterval(this.ciao, 7000);
-    intervalTestimonial;
+    setInterval(function () {
+      if (self.testimonialIndex < self.testimonial.length - 1) {
+        self.testimonialIndex += 1;
+      } else {
+        self.testimonialIndex = 0;
+      }
+    }, 7000);
 
     // effetto parallasse
     gsap.utils.toArray(".parallax").forEach((el, i) => {
@@ -151,17 +155,7 @@ new Vue({
   methods: {
     // funzione selezione testimonial
     changeTestimonial: function (index) {
-      let self = this;
       this.testimonialIndex = index;
-      clearInterval(self.intervalTestimonial);
-    },
-
-    ciao: function () {
-      if (this.testimonialIndex < this.testimonial.length - 1) {
-        this.testimonialIndex += 1;
-      } else {
-        this.testimonialIndex = 0;
-      }
     },
   },
 });
