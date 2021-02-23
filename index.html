@@ -328,20 +328,21 @@
             <h3>Our Home Owners Say</h3>
             <hr class="line-description" />
             <div class="img-testimonial">
-              <img src="img/testimonial.jpg" alt="" />
+              <img :src="testimonial[testimonialIndex].img" alt="" />
             </div>
             <p>
-              <i
-                >“No man but feels more of a man in the world if he have but a
-                bit of ground that he can call his own. However small it is on
-                the surface, it is four thousand miles deep; and that is a very
-                handsome property.”</i
-              >
+              <i>{{testimonial[testimonialIndex].text}}</i>
             </p>
-            <p><strong> HARRY SMITH • NEW HOME OWNER</strong></p>
+            <p><strong>{{testimonial[testimonialIndex].name}}</strong></p>
             <div class="circles">
-              <div class="circle"></div>
-              <div class="circle-full"></div>
+              <div v-for="(circle, i) in testimonial">
+                <div
+                  @click="changeTestimonial(i)"
+                  v-if="testimonialIndex === i"
+                  class="circle-full"
+                ></div>
+                <div @click="changeTestimonial(i)" v-else class="circle"></div>
+              </div>
             </div>
           </div>
           <div class="separatore-bottom"></div>
@@ -567,7 +568,10 @@
         </div>
         <!-- fine main footer -->
       </footer>
-      <div :class="{active : flag, disactive: !flag}" class="back-top-button">
+      <div
+        :class="{active : flagButton, disactive: !flagButton}"
+        class="back-top-button"
+      >
         <a href="#top"><i class="fas fa-angle-up"></i></a>
       </div>
       <!-- fine footer -->

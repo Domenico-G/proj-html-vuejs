@@ -647,6 +647,9 @@ body a {
   padding: 10px;
 }
 
+.testimonial {
+  position: relative;
+}
 .testimonial .parallax-bg {
   height: 1000px;
   background-image: url("../img/bg-testimonial.jpg");
@@ -656,6 +659,10 @@ body a {
 }
 .testimonial .separatore-bottom::after {
   background: #f5f5f5;
+}
+.testimonial:nth-child(2) {
+  position: absolute;
+  top: 0;
 }
 .testimonial-container {
   max-width: 1200px;
@@ -692,18 +699,25 @@ body a {
   justify-content: center;
   padding-top: 20px;
 }
-.testimonial-container .circles .circle {
-  height: 10px;
-  width: 10px;
+.testimonial-container .circles .circle-full {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
   border-radius: 50%;
   background-color: #fff;
+  margin: 0 5px;
 }
-.testimonial-container .circles .circle-full {
-  margin-left: 10px;
-  height: 9px;
-  width: 9px;
+.testimonial-container .circles .circle {
+  cursor: pointer;
+  margin: 0 5px;
+  height: 12px;
+  width: 12px;
   border-radius: 50%;
   border: 1px solid #fff;
+  transition: all 0.2s ease-in-out;
+}
+.testimonial-container .circles .circle:hover {
+  background-color: #fff;
 }
 
 .project {

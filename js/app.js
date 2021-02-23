@@ -1,9 +1,11 @@
 new Vue({
   el: "#app",
   data: {
+    timer: 0,
+    testimonialIndex: 0,
     buttonShow: 0,
     offSet: 0,
-    flag: false,
+    flagButton: false,
     slogan:
       "We are specialists in the construction of unique and exclusive properties. Our work inspires. We pride ourselves on delivering outstanding quality and design for leading clients across the world.",
     menuLink: [
@@ -92,18 +94,38 @@ new Vue({
         text: "International offices",
       },
     ],
+    testimonial: [
+      {
+        img: "img/testimonial.jpg",
+        text:
+          "“No man but feels more of a man in the world if he have but a bit of ground that he can call his own. However small it is on the surface, it is four thousand miles deep; and that is a very handsome property.”",
+        name: "HARRY SMITH • NEW HOME OWNER",
+      },
+      {
+        img: "img/testimonial-2.jpg",
+        text:
+          "“Many novice real estate investors soon quit the profession and invest. When you invest in real estate, you often see a side of humanity that stocks, bonds, mutual funds, and saving money shelter you from.”",
+        name: "JOHN DOE • PROPERTY INVESTOR",
+      },
+    ],
   },
   mounted() {
+    // evento per pulsante back to top
     this.buttonShow = document.querySelector(".jumbotron").offsetTop;
     let self = this;
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
       self.offSet = window.pageYOffset;
       if (self.offSet > self.buttonShow) {
-        self.flag = true;
+        self.flagButton = true;
       } else {
-        self.flag = false
+        self.flagButton = false;
       }
-    })
+    });
+
+    // dinamicizzazione testimonial
+    const intervalTestimonial = setInterval(this.ciao, 7000);
+    intervalTestimonial;
+
     // effetto parallasse
     gsap.utils.toArray(".parallax").forEach((el, i) => {
       el.bg = el.querySelector(".parallax-bg");
@@ -116,6 +138,7 @@ new Vue({
         },
       });
     });
+
     // effetto contatore numeri
     this.skills.forEach((el) => {
       gsap.to(el, {
@@ -124,6 +147,22 @@ new Vue({
         scrollTrigger: ".separatore-bottom",
       });
     });
+  },
+  methods: {
+    // funzione selezione testimonial
+    changeTestimonial: function (index) {
+      let self = this;
+      this.testimonialIndex = index;
+      clearInterval(self.intervalTestimonial);
+    },
+
+    ciao: function () {
+      if (this.testimonialIndex < this.testimonial.length - 1) {
+        this.testimonialIndex += 1;
+      } else {
+        this.testimonialIndex = 0;
+      }
+    },
   },
 });
 Vue.config.devtools = true;
