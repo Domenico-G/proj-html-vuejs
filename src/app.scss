@@ -1,5 +1,4 @@
 // common style
-
 @import "partials/colors";
 @import "partials/variables";
 
@@ -7,6 +6,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
   }
 }
 
-// utility style
+// utility style--------------------------------------------------------
 
 .line-description {
   margin: 25px auto;
@@ -117,7 +117,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
+  padding: 50px 0 100px 0;
 
   .btn-w {
     text-align: center;
@@ -138,7 +138,7 @@ body {
   hr {
     width: calc(100% / 3);
     margin: 0 20px;
-    border: 1px solid #f5f5f5;
+    border: 1px solid $bg-gray;
   }
 }
 
@@ -159,9 +159,9 @@ body {
   }
 }
 
-// fine style utility
+// fine style utility ---------------------------------------------
 
-// inizio style header
+// inizio style header -------------------------------------------------
 
 .menu {
   z-index: 1;
@@ -205,12 +205,9 @@ body {
         }
 
         &:last-child {
-          cursor: pointer;
-          background: $primary-color;
-          padding: 13px 29px;
+          @include primary-button-s;
 
-          &:hover {
-            background: $secondary-color;
+          a:hover {
             color: #fff;
           }
         }
@@ -253,29 +250,16 @@ body {
         justify-content: center;
 
         .button {
-          font-size: 18px;
-          font-weight: 400;
-          letter-spacing: 2px;
-          color: #fff;
-          text-transform: uppercase;
-          padding: 17px 40px;
-          background-color: $secondary-color;
+          @include primary-button-l;
           margin: 10px;
-          transition: $hover;
-          cursor: pointer;
 
-          &:hover {
-            background-color: $primary-color;
-            color: $secondary-color;
-          }
-
-          &:last-child {
-            background-color: $primary-color;
-            color: $secondary-color;
+          &:first-child {
+            background-color: $button-hover;
+            color: #fff;
 
             &:hover {
-              background-color: $secondary-color;
-              color: #fff;
+              background-color: $primary-color;
+              color: $button-hover;
             }
           }
         }
@@ -306,15 +290,10 @@ body {
   justify-content: center;
 
   .button {
-    background: $secondary-color;
-    font-size: 14px;
-    text-transform: uppercase;
-    padding: 13px 29px;
+    @include primary-button-s;
+    background-color: $button-hover;
     color: #fff;
-    letter-spacing: 2px;
     border: 2px solid #fff;
-    transition: $hover;
-    cursor: pointer;
 
     &:hover {
       background: #fff;
@@ -324,17 +303,16 @@ body {
   }
 }
 
-// fine style header
+// fine style header --------------------------------------------------
 
-// inizio style main
+// inizio style main  ---------------------------------------------------
 
 .skills {
   &-container {
     @include container-centred;
-    text-align: center;
 
     .description {
-      padding: 100px 0 80px 0;
+      @include description-style;
 
       h3 {
         @include style-h3;
@@ -350,6 +328,7 @@ body {
       display: flex;
 
       .flip-card {
+        text-align: center;
         width: 300px;
         min-height: 330px;
         perspective: 1000px;
@@ -371,7 +350,7 @@ body {
           border-radius: 10px;
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-          background-color: #f5f5f5;
+          background-color: $bg-gray;
 
           .icon {
             display: flex;
@@ -405,13 +384,12 @@ body {
           border-radius: 10px;
           position: absolute;
           top: 0;
-          -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
           background-color: $primary-color;
-          color: $secondary-color;
           transform: rotateY(180deg);
 
           h4 {
+            color: $secondary-color;
             padding-bottom: 10px;
             font-size: 18px;
             font-weight: 400;
@@ -424,17 +402,9 @@ body {
           }
 
           .button {
-            padding: 13px 29px;
-            width: max-content;
+            @include primary-button-s;
             margin: 10px auto;
             background-color: #ffe07b;
-            transition: $hover;
-            cursor: pointer;
-
-            &:hover {
-              background-color: $secondary-color;
-              color: #fff;
-            }
           }
         }
       }
@@ -480,8 +450,7 @@ body {
   @include container-centred;
 
   .description {
-    padding-top: 80px;
-    text-align: center;
+    @include description-style;
 
     h3 {
       @include style-h3;
@@ -493,7 +462,6 @@ body {
   }
 
   .cards {
-    padding: 80px 0;
     display: flex;
 
     .card {
@@ -510,14 +478,13 @@ body {
 }
 
 .values {
-  background-color: #f5f5f5;
+  background-color: $bg-gray;
 
   &-container {
     @include container-centred;
 
     .description {
-      text-align: center;
-      padding: 80px 0 50px 0;
+      @include description-style;
 
       h3 {
         @include style-h3;
@@ -533,7 +500,6 @@ body {
       padding-bottom: 80px;
 
       .card {
-        width: calc(100% / 4);
         text-align: center;
 
         .hover-effect {
@@ -651,11 +617,11 @@ body {
   }
 
   .separatore-top::after {
-    background: #f5f5f5;
+    background: $bg-gray;
   }
 
   .separatore-bottom::after {
-    background: #f5f5f5;
+    background: $bg-gray;
   }
 
   &-container {
@@ -712,14 +678,13 @@ body {
 }
 
 .project {
-  background: #f5f5f5;
+  background: $bg-gray;
 
   &-container {
     @include container-centred;
 
     .description {
-      padding: 80px 0;
-      text-align: center;
+      @include description-style;
 
       h3 {
         @include style-h3;
@@ -789,8 +754,6 @@ body {
       }
     }
     .work-button {
-      padding: 80px 0;
-
       hr {
         border: 1px solid #fff;
       }
@@ -800,11 +763,10 @@ body {
 
 .partners {
   &-container {
-    padding: 80px 0;
     @include container-centred;
 
     .description {
-      text-align: center;
+      @include description-style;
 
       h3 {
         @include style-h3;
@@ -816,7 +778,7 @@ body {
     }
 
     .logo-container {
-      padding-top: 50px;
+      padding: 30px 0 100px 0;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -909,10 +871,12 @@ footer {
       text-transform: uppercase;
     }
 
-    .box-slogan {
+    .box {
       width: calc(100% / 4);
       padding: 0 25px;
+    }
 
+    .box-slogan {
       .logo-footer {
         padding-right: 30px;
         width: 100%;
@@ -938,8 +902,6 @@ footer {
 
   .box-tweet {
     position: relative;
-    width: calc(100% / 4);
-    padding: 0 25px;
 
     &:hover i {
       color: #f5f8fa !important;
@@ -1031,9 +993,6 @@ footer {
   }
 
   .box-contact {
-    width: calc(100% / 4);
-    padding: 0 25px;
-
     .contact-content {
       font-family: $font-rale;
       display: flex;
@@ -1054,9 +1013,6 @@ footer {
   }
 
   .box-map {
-    width: calc(100% / 4);
-    padding: 0 25px;
-
     img {
       width: 100%;
     }
@@ -1095,4 +1051,32 @@ footer {
       }
     }
   }
+}
+
+.back-top-button {
+  position: fixed;
+  bottom: 0;
+  right: 80px;
+  border-radius: 5px 5px 0 0;
+  background-color: $button-hover;
+  color: #fff;
+  transition: $hover;
+
+  i {
+    font-size: 22px;
+    padding: 10px 20px;
+  }
+
+  &:hover {
+    background: $primary-color;
+
+  }
+}
+
+.active {
+  opacity: 1;
+}
+
+.disactive {
+  opacity: 0;
 }

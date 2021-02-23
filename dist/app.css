@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -100,7 +101,7 @@ body a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
+  padding: 50px 0 100px 0;
 }
 .work-button .btn-w {
   text-align: center;
@@ -182,10 +183,22 @@ body a {
 .menu-container .link li:last-child {
   cursor: pointer;
   background: #fdd13e;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  text-transform: uppercase;
   padding: 13px 29px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
 }
 .menu-container .link li:last-child:hover {
-  background: #1e1e1e;
+  background-color: #3f3f3f;
+  color: #fff;
+}
+.menu-container .link li:last-child a:hover {
   color: #fff;
 }
 
@@ -223,28 +236,31 @@ body a {
   justify-content: center;
 }
 .jumbotron-container .row .buttons .button {
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  color: #fff;
+  cursor: pointer;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  background: #fdd13e;
   text-transform: uppercase;
   padding: 17px 40px;
-  background-color: #1e1e1e;
-  margin: 10px;
+  font-size: 18px;
+  color: #333;
   transition: all 0.2s ease-in-out;
-  cursor: pointer;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px;
 }
 .jumbotron-container .row .buttons .button:hover {
-  background-color: #fdd13e;
-  color: #1e1e1e;
-}
-.jumbotron-container .row .buttons .button:last-child {
-  background-color: #fdd13e;
-  color: #1e1e1e;
-}
-.jumbotron-container .row .buttons .button:last-child:hover {
-  background-color: #1e1e1e;
+  background-color: #3f3f3f;
   color: #fff;
+}
+.jumbotron-container .row .buttons .button:first-child {
+  background-color: #3f3f3f;
+  color: #fff;
+}
+.jumbotron-container .row .buttons .button:first-child:hover {
+  background-color: #fdd13e;
+  color: #3f3f3f;
 }
 
 .bunner {
@@ -269,15 +285,25 @@ body a {
   justify-content: center;
 }
 .free-quote .button {
-  background: #1e1e1e;
-  font-size: 14px;
+  cursor: pointer;
+  background: #fdd13e;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   text-transform: uppercase;
   padding: 13px 29px;
-  color: #fff;
-  letter-spacing: 2px;
-  border: 2px solid #fff;
+  font-size: 14px;
+  color: #333;
   transition: all 0.2s ease-in-out;
-  cursor: pointer;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #3f3f3f;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.free-quote .button:hover {
+  background-color: #3f3f3f;
+  color: #fff;
 }
 .free-quote .button:hover {
   background: #fff;
@@ -289,10 +315,10 @@ body a {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  text-align: center;
 }
 .skills-container .description {
-  padding: 100px 0 80px 0;
+  padding: 100px 0 50px 0;
+  text-align: center;
 }
 .skills-container .description h3 {
   color: #333;
@@ -312,6 +338,7 @@ body a {
   display: flex;
 }
 .skills-container .cards .flip-card {
+  text-align: center;
   width: 300px;
   min-height: 330px;
   perspective: 1000px;
@@ -368,12 +395,12 @@ body a {
   position: absolute;
   top: 0;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
   background-color: #fdd13e;
-  color: #1e1e1e;
   transform: rotateY(180deg);
 }
 .skills-container .cards .flip-card-back h4 {
+  color: #1e1e1e;
   padding-bottom: 10px;
   font-size: 18px;
   font-weight: 400;
@@ -389,17 +416,23 @@ body a {
   width: auto;
 }
 .skills-container .cards .flip-card-back .button {
+  cursor: pointer;
+  background: #fdd13e;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  text-transform: uppercase;
   padding: 13px 29px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
   margin: 10px auto;
   background-color: #ffe07b;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
 }
 .skills-container .cards .flip-card-back .button:hover {
-  background-color: #1e1e1e;
+  background-color: #3f3f3f;
   color: #fff;
 }
 
@@ -438,7 +471,7 @@ body a {
   margin: 0 auto;
 }
 .work-container .description {
-  padding-top: 80px;
+  padding: 100px 0 50px 0;
   text-align: center;
 }
 .work-container .description h3 {
@@ -455,7 +488,6 @@ body a {
   margin: 0 auto;
 }
 .work-container .cards {
-  padding: 80px 0;
   display: flex;
 }
 .work-container .cards .card {
@@ -477,8 +509,8 @@ body a {
   margin: 0 auto;
 }
 .values-container .description {
+  padding: 100px 0 50px 0;
   text-align: center;
-  padding: 80px 0 50px 0;
 }
 .values-container .description h3 {
   color: #333;
@@ -498,7 +530,6 @@ body a {
   padding-bottom: 80px;
 }
 .values-container .values-cards .card {
-  width: calc(100% / 4);
   text-align: center;
 }
 .values-container .values-cards .card .hover-effect {
@@ -684,7 +715,7 @@ body a {
   margin: 0 auto;
 }
 .project-container .description {
-  padding: 80px 0;
+  padding: 100px 0 50px 0;
   text-align: center;
 }
 .project-container .description h3 {
@@ -752,20 +783,17 @@ body a {
   margin: 0 auto;
   width: auto;
 }
-.project-container .work-button {
-  padding: 80px 0;
-}
 .project-container .work-button hr {
   border: 1px solid #fff;
 }
 
 .partners-container {
-  padding: 80px 0;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
 .partners-container .description {
+  padding: 100px 0 50px 0;
   text-align: center;
 }
 .partners-container .description h3 {
@@ -782,7 +810,7 @@ body a {
   margin: 0 auto;
 }
 .partners-container .logo-container {
-  padding-top: 50px;
+  padding: 30px 0 100px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -829,6 +857,7 @@ body a {
   width: calc(100% / 3);
 }
 .call-to-action-container .button-box .button {
+  cursor: pointer;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -874,7 +903,7 @@ footer {
   margin-bottom: 28px;
   text-transform: uppercase;
 }
-.main-footer-container .box-slogan {
+.main-footer-container .box {
   width: calc(100% / 4);
   padding: 0 25px;
 }
@@ -893,6 +922,7 @@ footer {
   max-width: 230px;
 }
 .main-footer-container .box-slogan .button {
+  cursor: pointer;
   background: #fdd13e;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
@@ -911,8 +941,6 @@ footer {
 }
 .main-footer .box-tweet {
   position: relative;
-  width: calc(100% / 4);
-  padding: 0 25px;
 }
 .main-footer .box-tweet:hover i {
   color: #f5f8fa !important;
@@ -986,10 +1014,6 @@ footer {
   bottom: 0px;
   right: 25px;
 }
-.main-footer .box-contact {
-  width: calc(100% / 4);
-  padding: 0 25px;
-}
 .main-footer .box-contact .contact-content {
   font-family: "Raleway", sans-serif;
   display: flex;
@@ -1004,10 +1028,6 @@ footer {
   font-size: 14px;
   line-height: 1.5;
   font-weight: 600;
-}
-.main-footer .box-map {
-  width: calc(100% / 4);
-  padding: 0 25px;
 }
 .main-footer .box-map img {
   width: 100%;
@@ -1043,4 +1063,29 @@ footer {
   margin: 0 10px;
   font-size: 17px;
   cursor: pointer;
+}
+
+.back-top-button {
+  position: fixed;
+  bottom: 0;
+  right: 80px;
+  border-radius: 5px 5px 0 0;
+  background-color: #3f3f3f;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.back-top-button i {
+  font-size: 22px;
+  padding: 10px 20px;
+}
+.back-top-button:hover {
+  background: #fdd13e;
+}
+
+.active {
+  opacity: 1;
+}
+
+.disactive {
+  opacity: 0;
 }

@@ -3,6 +3,11 @@ $font-rale: "Raleway", sans-serif;
 $hover: all 0.2s ease-in-out;
 $bg-home: url("../img/bg-home.jpg");
 
+@mixin description-style {
+  padding: 100px 0 50px 0;
+  text-align: center;
+}
+
 @mixin container-centred {
   max-width: 1200px;
   width: 100%;
@@ -31,6 +36,7 @@ $bg-home: url("../img/bg-home.jpg");
 }
 
 @mixin primary-button-s {
+  cursor: pointer;
   background: $primary-color;
   max-width: max-content;
   text-transform: uppercase;
@@ -48,6 +54,7 @@ $bg-home: url("../img/bg-home.jpg");
 }
 
 @mixin primary-button-l {
+  cursor: pointer;
   max-width: max-content;
   background: $primary-color;
   text-transform: uppercase;

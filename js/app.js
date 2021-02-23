@@ -1,6 +1,9 @@
 new Vue({
   el: "#app",
   data: {
+    buttonShow: 0,
+    offSet: 0,
+    flag: false,
     slogan:
       "We are specialists in the construction of unique and exclusive properties. Our work inspires. We pride ourselves on delivering outstanding quality and design for leading clients across the world.",
     menuLink: [
@@ -91,10 +94,19 @@ new Vue({
     ],
   },
   mounted() {
+    this.buttonShow = document.querySelector(".jumbotron").offsetTop;
+    let self = this;
+    window.addEventListener("scroll", function() {
+      self.offSet = window.pageYOffset;
+      if (self.offSet > self.buttonShow) {
+        self.flag = true;
+      } else {
+        self.flag = false
+      }
+    })
     // effetto parallasse
     gsap.utils.toArray(".parallax").forEach((el, i) => {
       el.bg = el.querySelector(".parallax-bg");
-      console.log(el.bg);
       gsap.to(el.bg, {
         transform: `translate3d(0px, calc(0px - 200px), 0px)`,
         ease: "none",

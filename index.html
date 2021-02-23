@@ -30,7 +30,7 @@
     <!-- inizio app -->
     <div id="app">
       <!-- inizio header -->
-      <header>
+      <header id="#top">
         <!-- inizio menu -->
         <div class="menu">
           <div class="menu-container">
@@ -499,14 +499,14 @@
         <!-- inizio main footer -->
         <div class="main-footer">
           <div class="main-footer-container">
-            <div class="box-slogan">
+            <div class="box box-slogan">
               <div class="logo-footer">
                 <img src="img/footer-logo.png" alt="" />
               </div>
               <p>{{slogan}}</p>
               <div class="button">Learn more</div>
             </div>
-            <div class="box-tweet">
+            <div class="box box-tweet">
               <h4>LATEST TWEETS</h4>
               <div class="tweet-content">
                 <div class="fusion-img">
@@ -537,14 +537,14 @@
               </div>
               <div class="time">3h</div>
             </div>
-            <div class="box-contact">
+            <div class="box box-contact">
               <h4>Contact us today</h4>
               <div v-for="content in contactWidget" class="contact-content">
                 <i :class="content.iconCode"></i>
                 <p>{{content.description}}</p>
               </div>
             </div>
-            <div class="box-map">
+            <div class="box box-map">
               <h4>Find us</h4>
               <div class="map-img">
                 <img src="img/staticmap.png" alt="" />
@@ -567,6 +567,9 @@
         </div>
         <!-- fine main footer -->
       </footer>
+      <div :class="{active : flag, disactive: !flag}" class="back-top-button">
+        <a href="#top"><i class="fas fa-angle-up"></i></a>
+      </div>
       <!-- fine footer -->
     </div>
     <!-- fine app -->
