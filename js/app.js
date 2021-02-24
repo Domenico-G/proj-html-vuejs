@@ -131,10 +131,10 @@ new Vue({
     }, 7000);
 
     // effetto parallasse
-    gsap.utils.toArray(".parallax").forEach((el, i) => {
-      el.bg = el.querySelector(".parallax-bg");
-      gsap.to(el.bg, {
-        transform: `translate3d(0px, calc(0px - 200px), 0px)`,
+    gsap.utils.toArray(".parallax").forEach((el) => {
+      bg = el.querySelector(".parallax-bg");
+      gsap.to(bg, {
+        transform: `translate3d(0px, -200px, 0px)`,
         ease: "none",
         scrollTrigger: {
           trigger: el,
